@@ -2,15 +2,15 @@ import { useState } from 'react'
 // import './App.css'
 import Chai from './chai'
 import Cobra from './cobra'
+import { Child } from './component/Child'
+import UsercontextProvider from './context/UsercontextProvider'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [user, setUser] = useState({name: "JAy", age:30})
   return (
-    <>
-    <Chai/>
-    <Cobra/>
-    </>
+    <UsercontextProvider>
+   <Child />
+    </UsercontextProvider>
     
   )
 }
